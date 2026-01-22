@@ -1,9 +1,36 @@
 <nav class="w-full h-[41px] border-b-1 border-[#cccccc] flex justify-between">
-    <div class="flex gap-10 justify-between align-center">
-        <button class="text-[14px] font-bold">Filtrar por</button>
-        @for(button of filterNavButtons(); track button){
-            <app-filter-nav-button [title]="button.title" [value]="button.value"></app-filter-nav-button>
-        }
+    <!-- Filter By Button -->
+    <div class="flex">
+        <div class="hidden sm:flex justify-between align-center gap-10 ">
+            <button class="text-[14px] font-bold">Filtrar por</button>
+            @for(button of filterNavButtons(); track button){
+                <app-filter-nav-button [title]="button.title" [value]="button.value"></app-filter-nav-button>
+            }
+        </div>
+        <div class="sm:hidden flex align-center">
+            <button class="text-[14px] font-bold flex items-center cursor-pointer" [matMenuTriggerFor]="filterMenu">
+            Filtrar por<mat-icon fontIcon="arrow_drop_down"></mat-icon>
+            </button>
+            <mat-menu #filterMenu="matMenu">
+             @for(button of filterNavButtons(); track button){
+                <button mat-menu-item>
+                    <app-filter-nav-button [title]="button.title" [value]="button.value"></app-filter-nav-button>
+                </button>
+            }            
+            </mat-menu>
+        </div>
     </div>
-    <button class="text-[14px] font-bold">Ordenar por</button>
+    <!-- Order By Button -->
+    <div class="flex align-center">
+            <button class="text-[14px] font-bold flex items-center cursor-pointer" [matMenuTriggerFor]="orderbyMenu">
+            Ordenar por<mat-icon fontIcon="arrow_drop_down"></mat-icon>
+            </button>
+            <mat-menu #orderbyMenu="matMenu">
+             @for(button of orderNavButtons(); track button){
+                <button mat-menu-item>
+                    <app-filter-nav-button [title]="button.title" [value]="button.value"></app-filter-nav-button>
+                </button>
+            }            
+            </mat-menu>
+    </div>
 </nav>
