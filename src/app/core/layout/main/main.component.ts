@@ -1,20 +1,21 @@
-import { ChangeDetectionStrategy, Component, input } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, input } from "@angular/core";
 import { CarCardComponent } from "../car-card/car-card.component";
-import { CarModel } from "../../../domain/car.entity";
-import { Observable } from "rxjs";
 import { AsyncPipe } from "@angular/common";
+import { FilterNavBarComponent } from "../filter-nav-bar/filter-nav-bar.component";
+import { Store } from "@ngrx/store";
+import { filteredCarsList } from "../../../domain/cars/states/cars.selectors";
 
 
 
 @Component({
     selector: "app-main",
     templateUrl: "./main.component.html",
-    imports: [CarCardComponent, AsyncPipe],
+    imports: [CarCardComponent, AsyncPipe, FilterNavBarComponent],
     changeDetection: ChangeDetectionStrategy.OnPush,
 
 })
 export class MainComponent {
+    private readonly store = inject(Store)
 
-    public cars = input<Observable<CarModel[]>>()
-    
+    public cars = this.store.select(filteredCarsList)
 }

@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { NavBarComponent } from '../../core/layout/nav-bar/nav-bar.component';
 import { MainComponent } from "../../core/layout/main/main.component";
-import { HttpAxiosServices } from '../../core/services/http.services';
+import { Store } from '@ngrx/store';
+import { getCarsList } from '../../domain/cars/states/cars.actions';
 
 @Component({
   selector: 'app-home',
@@ -10,11 +11,9 @@ import { HttpAxiosServices } from '../../core/services/http.services';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit {
-    constructor(private readonly httpService: HttpAxiosServices){}
-
-    public getCars: any = []
+    private readonly store = inject(Store)   
 
     ngOnInit(): void {
-        this.getCars = this.httpService.requestUrl("https://challenge.egodesign.dev/api/models/")  
+        this.store.dispatch(getCarsList())  
     }
 }

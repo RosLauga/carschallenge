@@ -5,36 +5,36 @@
   </div>
   <!-- Buttons desktop -->
   <div class="hidden sm:flex w-full ml-5 md:ml-10 lg:ml-30 justify-between h-full">
-    <div class="flex items-center gap-4 ">
+    <div class="flex items-center">
         @if(buttons()){
             @for(button of buttons(); track button){
                 <app-button [title]="button.title"></app-button>
             }
         }
     </div>
-    <button
-    class="ml-4 flex items-center justify-center w-10 rounded-lg hover:bg-gray-100 transition"
-    >
-        <!-- Icon -->
-        <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6 text-gray-800"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
+    <div class="flex flex-row ">
+        <span class="text-[14px] self-center">Menu</span>
+        <button
+        class="ml-4 flex items-center justify-center w-10 rounded-lg hover:bg-gray-100 transition cursor-pointer"
         >
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-    </button>
-   
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-gray-800"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>   
   </div>
   <div class="sm:hidden flex w-full justify-end">
      <!-- Burger button (mobile) -->
     <button
       class="ml-4 flex items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 transition"
     >
-      <!-- Icon -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-6 w-6 text-gray-800"

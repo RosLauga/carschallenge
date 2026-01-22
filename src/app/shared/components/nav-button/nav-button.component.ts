@@ -8,13 +8,12 @@ export interface Button {
 
 @Component({
 selector: "app-button",
-templateUrl: "./button.component.html",
-styleUrl: "./button.component.css",
+templateUrl: "./nav-button.component.html",
 host: {
     class: 'h-full'
   },
 })
-export class ButtonComponent {
+export class NavButtonComponent {
 
     public title = input<string>("")
 
