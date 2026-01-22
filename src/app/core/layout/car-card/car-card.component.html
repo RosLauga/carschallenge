@@ -1,0 +1,11 @@
+<div class="flex flex-col align-center p-1 h-[248px]">    
+    <span class="font-bold text-2xl self-center text-center">
+        {{ title() }}
+    </span>    
+    <div class="flex flex-row text-sm justify-center">
+        <span class="self-center">{{ year() }} | {{ price() }}</span>        
+    </div>
+        <picture class="content-center m-auto hover:scale-110 duration-300 ease-in">
+            <img class="object-contain" [src]="image()">
+        </picture>
+</div>
