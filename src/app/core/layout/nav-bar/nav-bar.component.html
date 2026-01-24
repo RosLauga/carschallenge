@@ -8,7 +8,7 @@
     <div class="flex items-center">
         @if(buttons()){
             @for(button of buttons(); track button){
-                <app-button [title]="button.title"></app-button>
+                <app-button [title]="button.title" [index]="button.index"></app-button>
             }
         }
     </div>

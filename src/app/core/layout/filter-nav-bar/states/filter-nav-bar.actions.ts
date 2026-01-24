@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { FilterValues, OrderValues } from "../../../../shared/components/filter-nav-button/filter-nav-button.component";
+import { FilterValues, OrderValues } from "../../../../shared/components/filter-nav-button/models";
 
 // Search bye title
 export const filterList = createAction(
@@ -7,7 +7,7 @@ export const filterList = createAction(
   props<{ value: FilterValues }>(),
 );
 
-export const orderList = createAction(
+export const orderByList = createAction(
   "[Order List] Order List",
   props<{ value: OrderValues }>(),
 );

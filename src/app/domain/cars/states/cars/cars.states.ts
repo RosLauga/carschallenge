@@ -1,4 +1,4 @@
-import { CarModel } from "../models/cars.entity";
+import { CarModel } from "../../models/cars.model";
 
 export interface CarsStates {
   cars: CarModel[];

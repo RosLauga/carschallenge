@@ -1,9 +1,12 @@
-<div class="flex flex-col align-center p-1 h-[248px]">    
+<div class="flex flex-col align-center p-1 h-[248px]"
+    [routerLink]="['/home/detail', id()]"
+    (click)="getCarDetail(id())"
+>    
     <span class="font-bold text-2xl self-center text-center">
         {{ title() }}
     </span>    
     <div class="flex flex-row text-[14px] justify-center">
-        <span class="self-center">{{ year() }} | {{ price() }}</span>        
+        <span class="self-center">{{ year() }} | {{ price() | currency: "$":'symbol':'1.0-0' }}</span>        
     </div>
         <picture class="content-center m-auto hover:scale-110 duration-300 ease-in">
             <img class="object-contain" [src]="image()">

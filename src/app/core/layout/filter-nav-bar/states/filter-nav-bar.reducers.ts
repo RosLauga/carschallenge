@@ -1,10 +1,10 @@
 import { createReducer, on } from "@ngrx/store";
 import {
   filterList,
-  orderList
+  orderByList  
 } from "./filter-nav-bar.actions";
 import { FilterNavBarStates } from "./filter-nav-bar.states";
-import { FilterValues, OrderValues } from "../../../../shared/components/filter-nav-button/filter-nav-button.component";
+import { FilterValues, OrderValues } from "../../../../shared/components/filter-nav-button/models";
 
 export const initialState: FilterNavBarStates = {
   filter: FilterValues.all,
@@ -20,7 +20,7 @@ export const filterListReducer = createReducer(
       filter: value
     };
   }),
-  on(orderList, (state, {value}) => {
+  on(orderByList, (state, {value}) => {
     return {
       ...state,
       orderBy: value

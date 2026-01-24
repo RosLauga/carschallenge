@@ -12,10 +12,14 @@ export class NavBarComponent {
 
     public isMenuOpen = signal(false)
     public buttons = signal<Button[]>([{
-        title: "Modelos"
+        title: "Modelos",
+        index: 0,
+        path: "home"
     },
     {
-        title: "Ficha de modelo"
+        title: "Ficha de modelo",
+        index: 1,
+        path: "detail"
     }
     ])
 }

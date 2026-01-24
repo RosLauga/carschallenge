@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { CarModel } from "../models/cars.entity";
+import { CarModel } from "../../models/cars.model";
 
 // Search bye title
 export const getCarsList = createAction(
@@ -10,6 +10,3 @@ export const getCarsListSucceded = createAction(
   "[Cars List] Cars List Succeded",
   props<{cars: CarModel[]}>()
 )
-
-
-

@@ -1,8 +1,9 @@
 import { Component, input, signal } from "@angular/core";
-import { FilterNavButtonComponent, FilterNavButtonModel, FilterValues, OrderNavButtonModel, OrderValues } from "../../../shared/components/filter-nav-button/filter-nav-button.component";
+import { FilterNavButtonComponent } from "../../../shared/components/filter-nav-button/filter-nav-button.component";
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import { FilterNavButtonModel, FilterValues, OrderNavButtonModel, OrderValues } from "../../../shared/components/filter-nav-button/models";
 
 @Component({
 selector: "app-filter-nav-bar",

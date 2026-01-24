@@ -1,13 +1,26 @@
-<section class="mx-10 md:mx-20 lg:mx-40 px-8 pt-[85px]">
-<h3 class="sm:text-5xl text-3xl font-bold">Descubrí todos los modelos</h3>
-<main class="mt-[85px]">
-    <app-filter-nav-bar></app-filter-nav-bar>
-    <div class="grid grid-col-[1fr] grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-items-center">
-        @if(cars){
-            @for(car of cars | async; track car){
-                <app-car-card [title]="car.name" [image]="car.thumbnail" [price]="car.price" [year]="car.year"></app-car-card>
-            }
-        }
-    </div>
-</main>
-</section>
+<mat-tab-group [preserveContent]="true" [selectedIndex]="tabIndex$ | async">
+
+    <!-- Tab Model -->
+  <mat-tab>
+      <section class="mx-10 md:mx-20 lg:mx-40 px-8 pt-[85px]">
+      <h3 class="sm:text-5xl text-3xl font-bold">Descubrí todos los modelos</h3>
+      <!-- Grid of cars -->
+      <main class="mt-[85px]">
+          <!-- Filter Nav Bar -->
+          <app-filter-nav-bar></app-filter-nav-bar>
+          <div class="grid grid-col-[1fr] grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-items-center">
+              @if(cars$){
+                  @for(car of cars$ | async; track car){
+                      <app-car-card [id]="car.id" [title]="car.name" [image]="car.thumbnail" [price]="car.price" [year]="car.year"></app-car-card>
+                  }
+              }
+          </div>
+      </main>
+      </section>
+  </mat-tab>
+     <!-- Tab Description -->
+  <mat-tab>
+    <app-car-detail></app-car-detail>
+  </mat-tab>
+
+</mat-tab-group>

@@ -1,4 +1,4 @@
-import { FilterValues, OrderValues } from "../../../../shared/components/filter-nav-button/filter-nav-button.component";
+import { FilterValues, OrderValues } from "../../../../shared/components/filter-nav-button/models";
 
 export interface FilterNavBarStates {
   filter: FilterValues;

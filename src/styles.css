@@ -2,4 +2,19 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    line-height: 27px;
+}
+
+.mat-mdc-tab-header {
+    display: none!important;
+}
+
+.swiper-button-next {
+top: 0px!important;
+background: linear-gradient(90deg,rgba(0, 0, 0, 0.21) 0%, rgba(0, 0, 0, 0.46) 100%)!important;
+}
+
+.swiper-button-prev {
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0.21) 100%)!important;
+    top: 0px!important;
 }
