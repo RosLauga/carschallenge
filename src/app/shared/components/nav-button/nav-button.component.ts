@@ -9,6 +9,7 @@ export interface Button {
   title: string;
   index: number;
   path: string;
+  isDisabled: boolean;
   color?: string;
 }
 
@@ -26,6 +27,7 @@ export class NavButtonComponent {
   public title = input<string>("");
   public index = input<number>(0);
   public path = input<string>("");
+  public isDisabled = input<boolean>();
   public tabSelected = this.store.selectSignal(setTabIndexSelector);
 
   setTabIndex() {

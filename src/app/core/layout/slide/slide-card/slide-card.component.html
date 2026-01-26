@@ -1,5 +1,7 @@
-<section class="grid grid-row-3 gap-4 w-full justify-items-center mx-[10px]">
-  <img class="max-w-[268px]" [src]="image()" />
-  <span class="text-[20px] font-semibold text-[#373737]">{{ title() }}</span>
-  <div [innerHtml]="description()"></div>
+<section class="grid grid-row-3 gap-4 justify-items-center mx-[10px]">
+  <div class="max-w-[270px]">
+    <img class="max-w-[268px]" [src]="image()" />
+    <span class="text-[20px] font-semibold text-[#373737]">{{ title() }}</span>
+    <div [innerHtml]="description()"></div>
+  </div>
 </section>

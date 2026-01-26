@@ -31,11 +31,13 @@ export class NavBarComponent {
       title: "Modelos",
       index: 0,
       path: "home",
+      isDisabled: false,
     },
     {
       title: "Ficha de modelo",
       index: 1,
       path: "detail",
+      isDisabled: true,
     },
   ]);
 

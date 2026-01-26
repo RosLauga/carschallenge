@@ -13,15 +13,16 @@
         </picture>
         <div class="flex flex-col gap-4">
           <span class="font-bold text-[20px]">{{ car.name }}</span>
-          <span class="leading-12 text-[30px] md:text-[50px] font-bold">{{
-            car.title
-          }}</span>
+          <span
+            class="leading-12 text-[30px] sm:text-[30px] md:text-[50px] font-bold"
+            >{{ car.title }}</span
+          >
           <div class="text-[16px]" [innerHTML]="car.description"></div>
         </div>
       </div>
     </section>
     <!-- SlideShow -->
-    <section>
+    <section class="mt-[75px]">
       <app-slide [slideCarDetail]="car"></app-slide>
     </section>
     <section class="mx-10 md:mx-20 lg:mx-40 px-8 pt-[85px]">

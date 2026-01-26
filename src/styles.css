@@ -1,26 +1,31 @@
 @import "tailwindcss";
 
 body {
-    font-family: "Montserrat", sans-serif!important;
-    line-height: 27px;
+  font-family: "Montserrat", sans-serif !important;
+  line-height: 27px;
+  margin-bottom: 75px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .mat-mdc-tab-header {
-    display: none!important;
+  display: none !important;
 }
 
 .custom-menu {
-    display: flex;
-    width: 375px!important;
-    max-width: 375px!important;
-    text-align: end;
-    justify-content: end;
+  display: flex;
+  width: 375px !important;
+  max-width: 375px !important;
+  text-align: end;
+  justify-content: end;
 }
 
 .mat-mdc-menu-content {
-    font-family: "Montserrat", sans-serif!important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 .button {
-    font-family: "Montserrat", sans-serif!important;
+  font-family: "Montserrat", sans-serif !important;
 }

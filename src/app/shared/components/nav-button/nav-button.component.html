@@ -3,6 +3,7 @@
   (click)="setTabIndex()"
   [routerLink]="path()"
   [ngClass]="index() == tabSelected() ? 'active' : ''"
+  [disabled]="isDisabled()"
 >
   {{ title() }}
 </button>
