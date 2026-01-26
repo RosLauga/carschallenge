@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "baseHref": "/carschallenge/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -31,6 +32,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/carschallenge/",
               "budgets": [
                 {
                   "type": "initial",
@@ -86,6 +88,9 @@
               "src/styles.css"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
