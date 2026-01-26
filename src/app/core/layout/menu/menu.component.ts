@@ -22,9 +22,4 @@ export class MenuComponent {
     this.toggleMenu.emit()
   }
 
-  setTabIndex(index: number | null) {
-    if(index == null) return
-    this.store.dispatch(setTabIndexAction({index}))
-  }
-
  }

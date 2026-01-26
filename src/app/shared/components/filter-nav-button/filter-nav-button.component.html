@@ -1,5 +1,5 @@
 <button 
-    class="text-[14px] text-gray-900 h-full border-b items-center cursor-pointer hover:border-black hover:text-black" (click)="getFilter(value())"
+    class="button text-[14px] text-gray-900 h-full whitespace-nowrap border-b items-center cursor-pointer hover:border-black hover:text-black" (click)="getFilter(value())"
     [ngClass]="getActive() ? 'border-black' : 'border-transparent' "
     >
     <span>{{title()}}</span>
