@@ -14,13 +14,17 @@ export class CarDetailEffects {
   getCarDetailEffect$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(getCarDetail),
-      exhaustMap(({id}) => {
-        return this.httpService.requestUrl<CarDetailModel>(`https://challenge.egodesign.dev/api/models/${id}`)
-        .pipe(
-          map((res) => {
-          return getCarDetailSucceded({car: res});
-        }))
+      exhaustMap(({ id }) => {
+        return this.httpService
+          .requestUrl<CarDetailModel>(
+            `https://challenge.egodesign.dev/api/models/${id}`,
+          )
+          .pipe(
+            map((res) => {
+              return getCarDetailSucceded({ car: res });
+            }),
+          );
       }),
     );
-  });  
+  });
 }

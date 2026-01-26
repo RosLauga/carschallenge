@@ -1,41 +1,55 @@
-@if(isLoading$ | async){
-    <section class="h-screen content-center">
-        <mat-spinner class="!m-auto"></mat-spinner>
-    </section>
-}
-@else {
-    @if(carDetail$ | async; as car){
+@if (isLoading$ | async) {
+  <!-- Loading Spinner -->
+  <section class="h-screen content-center">
+    <mat-spinner class="!m-auto"></mat-spinner>
+  </section>
+} @else {
+  @if (carDetail$ | async; as car) {
+    <!-- Header -->
     <section class="mx-10 md:mx-20 lg:mx-40 px-8 pt-[85px]">
-        <div class="flex grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-            <picture>
-                <img [src]="car.photo" />
-            </picture>
-            <div class="flex flex-col gap-4">
-                <span class="font-bold text-[20px]">{{car.name}}</span>
-                <span class="leading-12 text-[30px] md:text-[50px] font-bold" >{{car.title}}</span>
-                <div class="text-[16px]" [innerHTML]="car.description"></div>
-            </div>
+      <div class="flex grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        <picture>
+          <img [src]="car.photo" />
+        </picture>
+        <div class="flex flex-col gap-4">
+          <span class="font-bold text-[20px]">{{ car.name }}</span>
+          <span class="leading-12 text-[30px] md:text-[50px] font-bold">{{
+            car.title
+          }}</span>
+          <div class="text-[16px]" [innerHTML]="car.description"></div>
         </div>
+      </div>
     </section>
+    <!-- SlideShow -->
     <section>
       <app-slide [slideCarDetail]="car"></app-slide>
     </section>
     <section class="mx-10 md:mx-20 lg:mx-40 px-8 pt-[85px]">
-    
-        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
-            <div class="md:ml-[50px] content-center">
-                <span class="text-[20px] font-semibold">Titulo 1</span>
-                <p class="text-[16px]">Texto lorem ipsum dolor sit amet orem ipsum dolor sit amet. lorem ipsum dolor sit amet orem ipsum dolor sit amet lorem ipsum dolor sit amet orem ipsum dolor sit amet.</p>
-            </div>
-            <img src="images/carDetailImage1.png" class="h-[199px] md:h-[295px]"/>
+      <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
+        <div class="md:ml-[50px] content-center">
+          <span class="text-[20px] font-semibold">Titulo 1</span>
+          <p class="text-[16px]">
+            Texto lorem ipsum dolor sit amet orem ipsum dolor sit amet. lorem
+            ipsum dolor sit amet orem ipsum dolor sit amet lorem ipsum dolor sit
+            amet orem ipsum dolor sit amet.
+          </p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-col-1 md:grid-cols-2">
-            <img src="images/carDetailImage2.png" class="order-2 md:order-1 h-[199px] md:h-[295px]" />
-            <div class="md: mr-[50px] content-center order-1 md:order-2">
-                <span class="text-[20px] font-semibold">Titulo 2</span>
-                <p class="text-[16px]">Texto lorem ipsum dolor sit amet orem ipsum dolor sit amet. lorem ipsum dolor sit amet orem ipsum dolor sit amet lorem ipsum dolor sit amet orem ipsum dolor sit amet.</p>
-            </div>
+        <img src="images/carDetailImage1.png" class="h-[199px] md:h-[295px]" />
+      </div>
+      <div class="grid grid-cols-1 sm:grid-col-1 md:grid-cols-2">
+        <img
+          src="images/carDetailImage2.png"
+          class="order-2 md:order-1 h-[199px] md:h-[295px]"
+        />
+        <div class="md: mr-[50px] content-center order-1 md:order-2">
+          <span class="text-[20px] font-semibold">Titulo 2</span>
+          <p class="text-[16px]">
+            Texto lorem ipsum dolor sit amet orem ipsum dolor sit amet. lorem
+            ipsum dolor sit amet orem ipsum dolor sit amet lorem ipsum dolor sit
+            amet orem ipsum dolor sit amet.
+          </p>
         </div>
+      </div>
     </section>
-    }
+  }
 }

@@ -1,19 +1,32 @@
-@if(slideCarDetail(); as car){
-    <swiper-container #swiper class="swiper"
-                     [breakpoints]="breakPoints"
-                     [initialSlide]="3"
-                     centered-slides="true" space-between="10" pagination="false"
-        pagination-type="fraction" navigation="true">
-        @for(des of car.model_features; track des){
-            <swiper-slide class="w-full">
-                <app-slide-card [title]="des.name" [description]="des.description" [image]="des.image"></app-slide-card>
-            </swiper-slide>
-    
-        }
-        @for(des of car.model_highlights; track des){
-            <swiper-slide class="w-full">
-                <app-slide-card [title]="des.title" [description]="des.content" [image]="des.image"></app-slide-card>
-            </swiper-slide>
-        }      
-    </swiper-container>
+@if (slideCarDetail(); as car) {
+  <swiper-container
+    #swiper
+    class="swiper"
+    [breakpoints]="breakPoints"
+    [initialSlide]="3"
+    centered-slides="true"
+    space-between="10"
+    pagination="false"
+    pagination-type="fraction"
+    navigation="true"
+  >
+    @for (des of car.model_features; track des) {
+      <swiper-slide class="w-full">
+        <app-slide-card
+          [title]="des.name"
+          [description]="des.description"
+          [image]="des.image"
+        ></app-slide-card>
+      </swiper-slide>
+    }
+    @for (des of car.model_highlights; track des) {
+      <swiper-slide class="w-full">
+        <app-slide-card
+          [title]="des.title"
+          [description]="des.content"
+          [image]="des.image"
+        ></app-slide-card>
+      </swiper-slide>
+    }
+  </swiper-container>
 }

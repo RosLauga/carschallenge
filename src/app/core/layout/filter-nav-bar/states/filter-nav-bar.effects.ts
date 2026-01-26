@@ -1,10 +1,7 @@
 import { Actions, createEffect, ofType } from "@ngrx/effects";
-import {
-  filterList,
-  filterListSucceded,
-} from "./filter-nav-bar.actions";
+import { filterList, filterListSucceded } from "./filter-nav-bar.actions";
 import { inject, Injectable } from "@angular/core";
-import { catchError, exhaustMap, map, of } from "rxjs";
+import { exhaustMap } from "rxjs";
 
 @Injectable()
 export class FilterNavBarEffects {
@@ -15,5 +12,5 @@ export class FilterNavBarEffects {
       ofType(filterList),
       exhaustMap(async () => filterListSucceded()),
     );
-  });  
+  });
 }

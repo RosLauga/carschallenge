@@ -6,30 +6,29 @@ import { setTabIndexSelector } from "../../../domain/cars/states/globals/globals
 import { RouterLink } from "@angular/router";
 
 export interface Button {
-    title: string;
-    index: number;
-    path: string,
-    color?: string;
+  title: string;
+  index: number;
+  path: string;
+  color?: string;
 }
 
-
 @Component({
-selector: "app-button",
-templateUrl: "./nav-button.component.html",
-styleUrl: "./nav-button.component.css",
-host: {
-    class: 'h-full'
+  selector: "app-button",
+  templateUrl: "./nav-button.component.html",
+  styleUrl: "./nav-button.component.css",
+  host: {
+    class: "h-full",
   },
-  imports: [CommonModule, RouterLink ]
+  imports: [CommonModule, RouterLink],
 })
 export class NavButtonComponent {
-    private readonly store = inject(Store)
-    public title = input<string>("")
-    public index = input<number>(0)
-    public path = input<string>("")
-    public tabSelected = this.store.selectSignal(setTabIndexSelector)
+  private readonly store = inject(Store);
+  public title = input<string>("");
+  public index = input<number>(0);
+  public path = input<string>("");
+  public tabSelected = this.store.selectSignal(setTabIndexSelector);
 
-    setTabIndex() {
-        this.store.dispatch(setTabIndexAction({index: this.index()}))
-    }
+  setTabIndex() {
+    this.store.dispatch(setTabIndexAction({ index: this.index() }));
+  }
 }

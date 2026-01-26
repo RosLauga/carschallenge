@@ -1,7 +1,8 @@
-<button class="h-full transition px-10 border-b-3 border-transparent font-bold hover:border-[#D0021B] hover:text-[#D0021B]"
+<button
+  class="h-full transition px-10 border-b-3 border-transparent font-bold hover:border-[#D0021B] hover:text-[#D0021B]"
   (click)="setTabIndex()"
   [routerLink]="path()"
   [ngClass]="index() == tabSelected() ? 'active' : ''"
 >
-{{title()}}
-</button>    
+  {{ title() }}
+</button>

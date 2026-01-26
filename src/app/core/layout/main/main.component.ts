@@ -7,9 +7,6 @@ import { filteredCarsList } from "../../../domain/cars/states/cars/cars.selector
 import {MatTabsModule} from '@angular/material/tabs';
 import { setTabIndexSelector } from "../../../domain/cars/states/globals/globals.selectors";
 import { CarDetailComponent } from "../car-detail/car-detail.component";
-
-
-
 @Component({
     selector: "app-main",
     templateUrl: "./main.component.html",

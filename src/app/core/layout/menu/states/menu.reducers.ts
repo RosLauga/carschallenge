@@ -26,20 +26,19 @@ const menuList: MenuListModel[] = [
   { title: "Ventas Especiales", index: 12 },
   { title: "Innovación", index: 13 },
   { title: "Prensa", index: 14 },
-  { title: "Acerca de", index: 15 }
+  { title: "Acerca de", index: 15 },
 ];
 
 export const initialState: MenuListStates = {
-menuList: menuList
+  menuList: menuList,
 };
-
 
 export const menuListReducer = createReducer(
   initialState,
   on(getMenuList, (state) => {
     return {
       ...state,
-      menuList: menuList
+      menuList: menuList,
     };
   }),
 );

@@ -11,11 +11,11 @@ import { MenuListStates } from "../layout/menu/states/menu.states";
 import { menuListReducer } from "../layout/menu/states/menu.reducers";
 
 export interface AppState {
-  filter: FilterNavBarStates,
-  cars: CarsStates,
-  car: CarDetailState,
-  globals: GlobalsStates,
-  menuList: MenuListStates
+  filter: FilterNavBarStates;
+  cars: CarsStates;
+  car: CarDetailState;
+  globals: GlobalsStates;
+  menuList: MenuListStates;
 }
 
 export const ROOT_REDUCER_MAP: ActionReducerMap<AppState> = {
@@ -23,5 +23,5 @@ export const ROOT_REDUCER_MAP: ActionReducerMap<AppState> = {
   cars: carsListReducer,
   car: carDetailReducer,
   globals: globalsReducer,
-  menuList: menuListReducer
+  menuList: menuListReducer,
 };
