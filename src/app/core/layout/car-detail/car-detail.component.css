@@ -1,5 +1,5 @@
 .header {
-  perspective: 1200px;
+  perspective: 800px;
 }
 
 .card {
@@ -7,7 +7,7 @@
 }
 
 .header:hover .card {
-  transform: rotateY(20deg) translateZ(10px);
+  transform: rotateY(-5deg) translateZ(5px);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
   transition: all 300ms ease-in; /* sombra más pronunciada */
 }
