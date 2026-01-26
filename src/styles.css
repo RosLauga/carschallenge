@@ -29,3 +29,16 @@ body {
 .button {
   font-family: "Montserrat", sans-serif !important;
 }
+
+[appScrollReveal] {
+  opacity: 0;
+  transform: translateX(-250px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+[appScrollReveal].visible {
+  transform: translateX(0);
+  opacity: 1;
+}

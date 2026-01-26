@@ -9,10 +9,18 @@ import { carDetail, isLoadingcarDetail } from "./states/car-detail.selectors";
 import { AsyncPipe, CommonModule } from "@angular/common";
 import { SlideComponent } from "../slide/slide.component";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { ScrollRevealDirective } from "../../../shared/components/scroll-animation/scroll-animation.component";
 @Component({
   selector: "app-car-detail",
   templateUrl: "./car-detail.component.html",
-  imports: [CommonModule, AsyncPipe, SlideComponent, MatProgressSpinnerModule],
+  styleUrl: "./car-detail.component.css",
+  imports: [
+    CommonModule,
+    AsyncPipe,
+    SlideComponent,
+    MatProgressSpinnerModule,
+    ScrollRevealDirective,
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class CarDetailComponent {

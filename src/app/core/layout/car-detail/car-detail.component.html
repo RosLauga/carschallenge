@@ -6,8 +6,8 @@
 } @else {
   @if (carDetail$ | async; as car) {
     <!-- Header -->
-    <section class="mx-10 md:mx-20 lg:mx-40 px-8 pt-[85px]">
-      <div class="flex grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+    <section class="header mx-10 md:mx-20 lg:mx-40 px-8 pt-[85px]">
+      <div class="card flex grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
         <picture>
           <img [src]="car.photo" />
         </picture>
@@ -26,7 +26,10 @@
       <app-slide [slideCarDetail]="car"></app-slide>
     </section>
     <section class="mx-10 md:mx-20 lg:mx-40 px-8 pt-[85px]">
-      <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
+      <div
+        appScrollReveal
+        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2"
+      >
         <div class="md:ml-[50px] content-center">
           <span class="text-[20px] font-semibold">Titulo 1</span>
           <p class="text-[16px]">
@@ -37,7 +40,10 @@
         </div>
         <img src="images/carDetailImage1.png" class="h-[199px] md:h-[295px]" />
       </div>
-      <div class="grid grid-cols-1 sm:grid-col-1 md:grid-cols-2">
+      <div
+        appScrollReveal
+        class="grid grid-cols-1 sm:grid-col-1 md:grid-cols-2"
+      >
         <img
           src="images/carDetailImage2.png"
           class="order-2 md:order-1 h-[199px] md:h-[295px]"
