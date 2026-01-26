@@ -1,0 +1,15 @@
+<menu class="text-[20px] leading-[32px] font-normal mr-[10px]">
+  @if(menuItems()){
+    <ul>
+    @for(item of menuItems(); track item){
+      @if(item === "break"){
+        <hr class="border-transparent my-5">
+        }@else {
+          <li>
+            <button class="border-b border-transparent hover:border-black">{{item}}</button>
+          </li>
+        }
+      }
+    </ul>
+  }
+</menu>

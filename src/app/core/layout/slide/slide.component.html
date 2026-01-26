@@ -1,5 +1,5 @@
 @if(slideCarDetail(); as car){
-    <swiper-container class="swiper" slides-per-view="4" centered-slides="true" space-between="10" pagination="false"
+    <swiper-container class="swiper" slides-per-view="4" initial-slide="1" centered-slides="true" space-between="10" pagination="false"
         pagination-type="fraction" navigation="true">
         @for(des of car.model_features; track des){
             <swiper-slide>

@@ -12,27 +12,29 @@
             }
         }
     </div>
+      <!-- Menu desktop -->
     <div class="flex flex-row ">
-        <span class="text-[14px] self-center">Menu</span>
-        <button
-        class="ml-4 flex items-center justify-center w-10 rounded-lg hover:bg-gray-100 transition cursor-pointer"
-        >
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 text-gray-800"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
+        <button class="font-bold flex items-center cursor-pointer z-1001"   
+                (click)="toggleMenu($event)"
+                [matMenuTriggerFor]="menu">
+              <span class="text-[14px] self-center">{{isMenuOpen() ? "Cerrar" : "Menu"}}</span>
+              <mat-icon [fontIcon]="isMenuOpen() ? 'close' : 'menu'"></mat-icon>
+            </button>             
+            <mat-menu #menu="matMenu" class="custom-menu" yPosition="below">
+            <app-menu></app-menu>         
+          </mat-menu>
     </div>   
   </div>
   <div class="sm:hidden flex w-full justify-end">
      <!-- Burger button (mobile) -->
-    <button
+    <button class="text-[14px] font-bold flex items-center cursor-pointer" [matMenuTriggerFor]="menu">
+            Ordenar por<mat-icon fontIcon="arrow_drop_down"></mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+             <app-menu></app-menu>         
+    </mat-menu>
+    
+     <!-- <button
       class="ml-4 flex items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 transition"
     >
       <svg
@@ -45,7 +47,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M4 6h16M4 12h16M4 18h16" />
       </svg>
-    </button>
+    </button> -->
 </div>
 </nav>
 

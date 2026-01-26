@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif!important;
     line-height: 27px;
 }
 
@@ -9,12 +9,14 @@ body {
     display: none!important;
 }
 
-.swiper-button-next {
-top: 0px!important;
-background: linear-gradient(90deg,rgba(0, 0, 0, 0.21) 0%, rgba(0, 0, 0, 0.46) 100%)!important;
+.custom-menu {
+    display: flex;
+    width: 375px!important;
+    max-width: 375px!important;
+    text-align: end;
+    justify-content: end;
 }
 
-.swiper-button-prev {
-    background: linear-gradient(90deg,rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0.21) 100%)!important;
-    top: 0px!important;
+.mat-mdc-menu-content {
+    font-family: "Montserrat", sans-serif!important;
 }

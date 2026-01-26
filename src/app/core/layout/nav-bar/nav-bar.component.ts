@@ -1,12 +1,16 @@
 import { CommonModule } from "@angular/common";
-import { ChangeDetectionStrategy, Component, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, signal, ViewChild } from "@angular/core";
 import { Button, NavButtonComponent } from "../../../shared/components";
+import { MenuComponent } from "../menu/menu.component";
+import { MatMenuModule, MatMenuTrigger } from "@angular/material/menu";
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, NavButtonComponent],
+  imports: [CommonModule, NavButtonComponent,MatMenuModule,MatButtonModule,MatIconModule, MenuComponent],
 })
 export class NavBarComponent {
 
@@ -22,4 +26,13 @@ export class NavBarComponent {
         path: "detail"
     }
     ])
+
+    @ViewChild(MatMenuTrigger) trigger!: MatMenuTrigger
+
+  toggleMenu(event: MouseEvent) {
+      event.preventDefault();
+      event.stopPropagation();
+      this.isMenuOpen.set(this.trigger.menuOpen);
+    }
+
 }
