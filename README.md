@@ -34,17 +34,21 @@ Menu abierto en Firefox
 <img width="652" height="903" alt="imagen" src="https://github.com/user-attachments/assets/507a66be-7b26-4ba1-989b-67ad95fe3c3b" />
 <img width="269" height="344" alt="imagen" src="https://github.com/user-attachments/assets/1839145d-d024-4e13-b2c2-352bfba2d2d1" />
 
+
 Se configuro una barra de navegación para poder filtrar los autos dependiendo el tipo:
 <img width="1239" height="774" alt="imagen" src="https://github.com/user-attachments/assets/74eaa115-eb6f-4b25-af86-5c3b91a61457" />
 
+
 Se configuro el filtro de order by para poder ordenar de manera ascendente,descendente, por más nuevos y por más viejos:
 <img width="967" height="553" alt="imagen" src="https://github.com/user-attachments/assets/d70d4ea7-a566-46e9-b6a8-d1f76cd8eb73" />
+
 
 Se agrego funcionalidad para poder visitar la ficha de cada modelo del auto utilizando la información de la api brindada:
 <img width="1225" height="863" alt="imagen" src="https://github.com/user-attachments/assets/3e5dace7-bb5d-4725-bb39-f4a7630c3987" />
 
 Se agrego slideshow que al cambiar la resolución se ajusta a la cantidad de slides a mostrar:
 <img width="763" height="1007" alt="imagen" src="https://github.com/user-attachments/assets/7be02d37-5b60-4c5b-a746-eb1ac4c49df8" />
+
 
 
 
