@@ -1,59 +1,50 @@
 # Egochallenge
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.1.
+Stack: Este proyecto se ha realizado con el framework Angular 20.0.1, se ha usado Ngrx para manejar un store y estados, se ha utilizado axios para realizar peticiones a la api.
+Infrastructura de la app: Se ha organizado la app usando una estructura DDD (domain driven design) lo que facilita la escabilidad del proyecto.
+Librerias: Para el slideshow se ha utilizado swiper en una version Swiper Element que es compatible con la versión de Angular utilizada en el proyecto.
 
-## Development server
+Descripción del proyecto:
+A la hora de realizar la aplicación se han seguido todos los lineamientos planteados, solo por una cuestión de probar en diferentes resoluciones se han hecho correcciones minimas a la apariencia de ciertos componentes, textos, imagenes etc.
 
-To start a local development server, run:
+## Correr la aplicación
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Para poder levantar la aplicación es necesario clonarse el repositorio y luego realizar desde el raiz un:
 
 ```bash
-ng generate component component-name
+npm install
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Luego para correrlo ejecutar:
 
 ```bash
-ng generate --help
+npm run start
 ```
 
-## Building
+Una vez que haya levantado la aplicación se podrá ver em `http://localhost:4200/`.
 
-To build the project run:
+## Desarrollo y funcionalidades
 
-```bash
-ng build
-```
+La aplicación se ha realizado completamente responsive y siguiendo los lineamientos solicitados. 
+Dejo a continuación algunos screenshots con algunas especificaciones del desarrollo:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Menu en abierto en Chrome
+<img width="954" height="723" alt="imagen" src="https://github.com/user-attachments/assets/f5dbcfc3-7d41-44c4-a084-25fddbf1e69f" />
 
-## Running unit tests
+Menu abierto en Firefox
+<img width="652" height="903" alt="imagen" src="https://github.com/user-attachments/assets/507a66be-7b26-4ba1-989b-67ad95fe3c3b" />
+<img width="269" height="344" alt="imagen" src="https://github.com/user-attachments/assets/1839145d-d024-4e13-b2c2-352bfba2d2d1" />
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Se configuro una barra de navegación para poder filtrar los autos dependiendo el tipo:
+<img width="1239" height="774" alt="imagen" src="https://github.com/user-attachments/assets/74eaa115-eb6f-4b25-af86-5c3b91a61457" />
 
-```bash
-ng test
-```
+Se configuro el filtro de order by para poder ordenar de manera ascendente,descendente, por más nuevos y por más viejos:
+<img width="967" height="553" alt="imagen" src="https://github.com/user-attachments/assets/d70d4ea7-a566-46e9-b6a8-d1f76cd8eb73" />
 
-## Running end-to-end tests
+Se agrego funcionalidad para poder visitar la ficha de cada modelo del auto utilizando la información de la api brindada:
+<img width="1225" height="863" alt="imagen" src="https://github.com/user-attachments/assets/3e5dace7-bb5d-4725-bb39-f4a7630c3987" />
 
-For end-to-end (e2e) testing, run:
+Se agrego slideshow que al cambiar la resolución se ajusta a la cantidad de slides a mostrar:
+<img width="763" height="1007" alt="imagen" src="https://github.com/user-attachments/assets/7be02d37-5b60-4c5b-a746-eb1ac4c49df8" />
 
-```bash
-ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
