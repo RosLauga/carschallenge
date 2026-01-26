@@ -29,9 +29,7 @@ export class NavBarComponent {
 
     @ViewChild(MatMenuTrigger) trigger!: MatMenuTrigger
 
-  toggleMenu(event: MouseEvent) {
-      event.preventDefault();
-      event.stopPropagation();
+  toggleMenu() {
       this.isMenuOpen.set(this.trigger.menuOpen);
     }
 

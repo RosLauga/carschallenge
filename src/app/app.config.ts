@@ -11,6 +11,7 @@ import { FilterNavBarEffects } from './core/layout/filter-nav-bar/states/filter-
 import { CarDetailEffects } from './core/layout/car-detail/states/car-detail.effects';
 import { GlobalsEffects } from './domain/cars/states/globals/globals.effects';
 import { register } from 'swiper/element/bundle';
+import { MenuListEffects } from './core/layout/menu/states/menu.effects';
 
 register()
 export const appConfig: ApplicationConfig = {
@@ -20,6 +21,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideStore(ROOT_REDUCER_MAP),
     provideHttpClient(),
-    provideEffects(CarsEffects, FilterNavBarEffects, CarDetailEffects, GlobalsEffects),
+    provideEffects(CarsEffects, FilterNavBarEffects, CarDetailEffects, GlobalsEffects, MenuListEffects),
   ]
 };

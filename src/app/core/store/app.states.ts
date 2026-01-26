@@ -7,17 +7,21 @@ import { carDetailReducer } from "../layout/car-detail/states/car-detail.reducer
 import { CarDetailState } from "../layout/car-detail/states/car-detail.states";
 import { GlobalsStates } from "../../domain/cars/states/globals/globals.states";
 import { globalsReducer } from "../../domain/cars/states/globals/globals.reducers";
+import { MenuListStates } from "../layout/menu/states/menu.states";
+import { menuListReducer } from "../layout/menu/states/menu.reducers";
 
 export interface AppState {
   filter: FilterNavBarStates,
   cars: CarsStates,
   car: CarDetailState,
-  globals: GlobalsStates
+  globals: GlobalsStates,
+  menuList: MenuListStates
 }
 
 export const ROOT_REDUCER_MAP: ActionReducerMap<AppState> = {
   filter: filterListReducer,
   cars: carsListReducer,
   car: carDetailReducer,
-  globals: globalsReducer
+  globals: globalsReducer,
+  menuList: menuListReducer
 };

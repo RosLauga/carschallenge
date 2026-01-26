@@ -1,12 +1,17 @@
-<menu class="text-[20px] leading-[32px] font-normal mr-[10px]">
-  @if(menuItems()){
-    <ul>
-    @for(item of menuItems(); track item){
-      @if(item === "break"){
+<menu class="text-[20px] leading-[32px] font-normal m-[10px_10px_20px_0px] ">
+            <button class="sm:hidden inline-grid align-center grid-flow-col cursor-pointer"   
+               (click)="onClick()">
+               <span class="text-[14px] self-center">Cerrar</span>
+               <mat-icon class="content-center !h-full !text-[14px]" fontIcon="close"></mat-icon>
+             </button>
+  @if(menuList | async; as menu){
+    <ul class="mt-[20px]">
+    @for(item of menu; track item){
+      @if(item.title === "break"){
         <hr class="border-transparent my-5">
         }@else {
           <li>
-            <button class="border-b border-transparent hover:border-black">{{item}}</button>
+            <button (click)="setTabIndex(item.index)" class="border-b border-transparent hover:border-black">{{item.title}}</button>
           </li>
         }
       }
